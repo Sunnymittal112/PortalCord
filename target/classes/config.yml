@@ -1,0 +1,68 @@
+# PortalCord Configuration
+# Create Bot: https://discord.com/developers/applications
+
+discord:
+  token: "YOUR_BOT_TOKEN_HERE"
+  guild-id: "YOUR_GUILD_ID_HERE"
+  
+  # Channel IDs
+  channels:
+    chat: "CHAT_CHANNEL_ID"        # Two-way chat
+    console: "CONSOLE_CHANNEL_ID"  # Console access (optional)
+    status: "STATUS_CHANNEL_ID"    # Player count updates (optional)
+  
+  # Live player count in channel name
+  status-channel:
+    enabled: true
+    format: "🎮 Players: {online}/{max}"
+    update-interval: 60 # seconds
+
+messages:
+  # Minecraft -> Discord
+  minecraft-format:
+    chat: ":speech_left: **{player}**: {message}"
+    join: ":green_circle: **{player}** joined the server"
+    leave: ":red_circle: **{player}** left the server"
+    death: ":skull: {message}"
+    advancement: ":trophy: **{player}** has made the advancement **[{advancement}]**"
+  
+  # Discord -> Minecraft
+  discord-format: "§9[§bDiscord§9] §f{displayname}: §7{message}"
+  
+  # Use embeds? (true = modern look, false = plain text)
+  use-embeds: true
+  
+  # Show player skin in embed?
+  show-player-skins: true
+  
+  # Bot activity ("Playing Minecraft", "Watching 5 players", etc.)
+  activity:
+    enabled: true
+    type: "WATCHING" # PLAYING, WATCHING, LISTENING, COMPETING
+    text: "{online} players online"
+
+commands:
+  # Discord Slash Commands enabled?
+  slash-commands: true
+  
+  # Role IDs allowed to use admin commands from Discord
+  admin-roles:
+    - "ADMIN_ROLE_ID"
+  
+  # Console access enabled? (DANGEROUS - only for trusted admins)
+  console-access:
+    enabled: false
+    allowed-roles:
+      - "CONSOLE_ROLE_ID"
+
+filters:
+  # Don't send these commands to Discord
+  hidden-commands:
+    - "/login"
+    - "/register"
+    - "/password"
+  
+  # Words to censor
+  blocked-words:
+    - "badword1"
+    - "badword2"

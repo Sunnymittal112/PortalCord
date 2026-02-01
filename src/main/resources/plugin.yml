@@ -1,0 +1,21 @@
+name: PortalCord
+version: '${project.version}'
+main: com.fetal.portalcord.PortalCord
+api-version: '1.21'
+author: FeTaL
+description: Modern Discord Bridge with Embeds & Slash Commands
+website: https://modrinth.com/plugin/portalcord
+
+commands:
+  portalcord:
+    description: PortalCord main command
+    usage: /portalcord reload
+    aliases: [pc, discordbridge]
+
+permissions:
+  portalcord.admin:
+    description: Admin commands
+    default: op
+  portalcord.reload:
+    description: Reload config
+    default: op

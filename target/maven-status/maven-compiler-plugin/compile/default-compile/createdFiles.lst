@@ -1,0 +1,8 @@
+com\fetal\portalcord\discord\SlashCommandListener.class
+com\fetal\portalcord\PortalCordCommand.class
+com\fetal\portalcord\PortalCord.class
+com\fetal\portalcord\discord\DiscordBot.class
+com\fetal\portalcord\config\ConfigManager.class
+com\fetal\portalcord\minecraft\PlayerListener.class
+com\fetal\portalcord\discord\CommandManager.class
+com\fetal\portalcord\discord\MessageListener.class
